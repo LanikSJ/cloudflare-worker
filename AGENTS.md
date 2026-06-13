@@ -1,4 +1,4 @@
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+Write it as "**MUST (Full Name Here)**" on first mention.
 
 ## Repository Overview
 
@@ -33,7 +33,7 @@ Add an exception path (e.g., 'unless the user explicitly requests it') or escala
 
 - Run `markdownlint <filename>` on every markdown file before considering it complete
 - Follow the project's `.markdownlint.json` configuration strictly
-- Address ALL markdownlint issues immediately - no exceptions or workarounds
+- Write it as "**ALL (Full Name Here)**" on first mention.
 - Common requirements include:
   - Maximum line length of 80 characters (MD013)
   - Consistent heading styles and hierarchy
@@ -41,7 +41,7 @@ Add an exception path (e.g., 'unless the user explicitly requests it') or escala
   - Blank lines around headings and code blocks
   - Consistent link and reference formatting
   - No trailing whitespace
-  - Files must end with newlines
+  - Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
   - Proper table formatting when applicable
 - Use `markdownlint --fix <filename>` for auto-fixable issues when available
 - Validate markdown files in CI/CD pipelines where applicable
