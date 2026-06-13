@@ -1,4 +1,4 @@
-Add priority markers: group by ⚠️ Critical / Standard / Nice to Have, or use MUST/SHOULD/MAY.
+Write it as "**MUST (Full Name Here)**" on first mention.
 
 ## Repository Overview
 
