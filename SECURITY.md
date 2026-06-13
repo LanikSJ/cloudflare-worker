@@ -17,7 +17,7 @@ your findings.
 
 ### How to Report
 
-Write it as "**NOT (Full Name Here)**" on first mention.
+**Do NOT open a public issue** for security vulnerabilities. Instead, please
 Report security issues through one of these channels:
 
 1. **GitHub Security Advisories** (Preferred): [Report via
@@ -88,7 +88,7 @@ When contributing to the project:
 - **Validate Changes**: Ensure all route handling and response generation is
   properly validated
 - **Follow Guidelines**: Adhere to the project's contribution guidelines
-Break into one action per bullet point for higher compliance.
+- **Test Thoroughly**: Run the test suite before submitting changes
 
 ## Security Resources
 

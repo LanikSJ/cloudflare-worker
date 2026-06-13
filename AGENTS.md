@@ -1,4 +1,4 @@
-Add a ## Examples section or include inline examples with ``` code blocks
+Add priority markers: group by â ï¸ Critical / Standard / Nice to Have, or use MUST/SHOULD/MAY.
 
 ## Repository Overview
 
@@ -29,7 +29,7 @@ dotfiles contains personal configuration files, scripts, and settings for develo
 
 ### Markdown Compliance Requirements (MANDATORY)
 
-Write it as "**ALL (Full Name Here)**" on first mention.
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
 
 - Run `markdownlint <filename>` on every markdown file before considering it complete
 - Follow the project's `.markdownlint.json` configuration strictly
@@ -41,6 +41,7 @@ Write it as "**ALL (Full Name Here)**" on first mention.
   - Blank lines around headings and code blocks
   - Consistent link and reference formatting
   - No trailing whitespace
+  - Files must end with newlines
   - Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
   - Proper table formatting when applicable
 - Use `markdownlint --fix <filename>` for auto-fixable issues when available
@@ -83,7 +84,7 @@ Before completing any change in `.github/`:
 
 ### Documentation standards in .github/
 
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+- `.github/CONTRIBUTING.md` must include:
 
 - Development environment setup instructions.
 - Testing requirements and procedures.
@@ -92,9 +93,9 @@ Add an exception path (e.g., 'unless the user explicitly requests it') or escala
 
 ### Automation and CI/CD
 
-- Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+- Project workflows must include automated testing stages.
+- Code quality checks must be integrated into CI/CD.
+- Release automation must be properly configured.
 
 ### Error Prevention
 
