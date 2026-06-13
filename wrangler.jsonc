@@ -19,5 +19,11 @@
       "pattern": "lanik.us/security.txt",
       "zone_name": "lanik.us"
     }
-  ]
+  ],
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    }
+  }
 }

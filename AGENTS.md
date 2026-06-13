@@ -1,4 +1,4 @@
-# Agent Rules & Project Standards for dotfiles
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
 
 ## Repository Overview
 
@@ -29,7 +29,8 @@ dotfiles contains personal configuration files, scripts, and settings for develo
 
 ### Markdown Compliance Requirements (MANDATORY)
 
-- **ALL markdown files (.md) MUST pass markdownlint validation with zero errors or warnings**
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+
 - Run `markdownlint <filename>` on every markdown file before considering it complete
 - Follow the project's `.markdownlint.json` configuration strictly
 - Address ALL markdownlint issues immediately - no exceptions or workarounds
@@ -52,7 +53,7 @@ dotfiles contains personal configuration files, scripts, and settings for develo
 - Preserve existing functionality unless explicitly asked to change it
 - Update documentation when modifying configurations
 - Test changes across different systems and environments
-- **Always run markdownlint and fix all issues in markdown files before considering changes complete**
+- Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
 
 ### Dotfiles Standards
 
@@ -82,21 +83,23 @@ Before completing any change in `.github/`:
 
 ### Documentation standards in .github/
 
-- `.github/CONTRIBUTING.md` must include:
-  - Development environment setup instructions.
-  - Testing requirements and procedures.
-  - Documentation standards for new features.
-  - Project-specific contribution guidelines.
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+
+- Development environment setup instructions.
+- Testing requirements and procedures.
+- Documentation standards for new features.
+- Project-specific contribution guidelines.
 
 ### Automation and CI/CD
 
-- Project workflows must include automated testing stages.
-- Code quality checks must be integrated into CI/CD.
-- Release automation must be properly configured.
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
 
 ### Error Prevention
 
-- NEVER generate markdown that violates line length or formatting rules.
-- ALWAYS cross-reference with existing project practices before making changes.
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+
 - ENSURE all links and references are valid and current.
 - VALIDATE that new requirements don't conflict with established workflows.
