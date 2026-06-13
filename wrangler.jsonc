@@ -1,0 +1,32 @@
+{
+  // Security.txt Worker — serves RFC 9116 compliant security.txt for lanik.us domains
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "security-txt",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-04-14",
+  "vars": {
+    "CONTACT_EMAIL": "admin@lanik.us",
+    "POLICY_URL": "https://laniksj.github.io",
+    "PREFERRED_LANGUAGES": "en"
+  },
+  "routes": [
+    // lanik.us
+    {
+      "pattern": "lanik.us/.well-known/security.txt",
+      "zone_name": "lanik.us"
+    },
+    {
+      "pattern": "lanik.us/security.txt",
+      "zone_name": "lanik.us"
+    },
+    // forums.lanik.us
+    {
+      "pattern": "forums.lanik.us/.well-known/security.txt",
+      "zone_name": "forums.lanik.us"
+    },
+    {
+      "pattern": "forums.lanik.us/security.txt",
+      "zone_name": "forums.lanik.us"
+    }
+  ]
+}
