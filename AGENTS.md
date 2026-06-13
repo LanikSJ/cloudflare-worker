@@ -1,4 +1,4 @@
-Create TOOLS.md or add a ## Tools section documenting available tools, APIs, and usage patterns.
+Add priority markers: group by ⚠️ Critical / Standard / Nice to Have, or use MUST/SHOULD/MAY.
 
 ## Repository Overview
 
