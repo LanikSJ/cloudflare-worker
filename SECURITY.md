@@ -79,7 +79,7 @@ This project is a Cloudflare Worker that serves an
 
 - **Verify Sources**: Ensure you are accessing `security.txt` from an official
   Lanik.us domain
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+  Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
 
 ### For Developers
 
@@ -88,7 +88,7 @@ When contributing to the project:
 - **Validate Changes**: Ensure all route handling and response generation is
   properly validated
 - **Follow Guidelines**: Adhere to the project's contribution guidelines
-Break into one action per bullet point for higher compliance.
+  Break into one action per bullet point for higher compliance.
 
 ## Security Resources
 
