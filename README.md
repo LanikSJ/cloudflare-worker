@@ -1,5 +1,7 @@
 # Security.txt Cloudflare Worker
 
+[![Test Cloudflare Worker](https://github.com/LanikSJ/cloudflare-worker/actions/workflows/deploy-test.yml/badge.svg)](https://github.com/LanikSJ/cloudflare-worker/actions/workflows/deploy-test.yml)
+
 A [Cloudflare Worker](https://workers.cloudflare.com/) that serves an
 [RFC 9116](https://datatracker.ietf.org/doc/html/rfc9116)-compliant
 `security.txt` file for Lanik.us domains.
