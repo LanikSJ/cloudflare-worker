@@ -1,4 +1,4 @@
-Write it as "**MUST (Full Name Here)**" on first mention.
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
 
 ## Repository Overview
 
@@ -41,6 +41,7 @@ Add an exception path (e.g., 'unless the user explicitly requests it') or escala
   - Blank lines around headings and code blocks
   - Consistent link and reference formatting
   - No trailing whitespace
+  - Files must end with newlines
   - Proper table formatting when applicable
 - Use `markdownlint --fix <filename>` for auto-fixable issues when available
 - Validate markdown files in CI/CD pipelines where applicable
