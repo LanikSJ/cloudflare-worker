@@ -1,4 +1,4 @@
-name: Test
+name: Test Cloudflare Worker
 
 on:
   pull_request:
