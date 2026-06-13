@@ -1,0 +1,6 @@
+---
+title: Cloudflare Security.txt Worker
+description: Cloudflare worker that serves RFC 9116 compliant security.txt for lanik.us domains.
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-slate
