@@ -100,6 +100,6 @@ Before completing any change in `.github/`:
 ### Error Prevention
 
 - Write it as "**NEVER (Full Name Here)**" on first mention.
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+  Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
 - ENSURE all links and references are valid and current.
 - VALIDATE that new requirements don't conflict with established workflows.
