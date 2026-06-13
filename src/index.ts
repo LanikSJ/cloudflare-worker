@@ -24,12 +24,8 @@ export default {
 			});
 		}
 
-		// Pass through everything else
-		try {
-			return await fetch(request);
-		} catch (err) {
-			return new Response('Upstream fetch failed', { status: 502 });
-		}
+		// Return 404 for everything else
+		return new Response('Not Found', { status: 404 });
 	},
 };
 
