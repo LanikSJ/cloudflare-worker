@@ -17,7 +17,7 @@ your findings.
 
 ### How to Report
 
-**Do NOT open a public issue** for security vulnerabilities. Instead, please
+Write it as "**NOT (Full Name Here)**" on first mention. Instead, please
 Report security issues through one of these channels:
 
 1. **GitHub Security Advisories** (Preferred): [Report via
@@ -79,7 +79,7 @@ This project is a Cloudflare Worker that serves an
 
 - **Verify Sources**: Ensure you are accessing `security.txt` from an official
   Lanik.us domain
-  Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
 
 ### For Developers
 
@@ -88,7 +88,7 @@ When contributing to the project:
 - **Validate Changes**: Ensure all route handling and response generation is
   properly validated
 - **Follow Guidelines**: Adhere to the project's contribution guidelines
-- **Test Thoroughly**: Run the test suite before submitting changes
+Break into one action per bullet point for higher compliance.
 
 ## Security Resources
 
