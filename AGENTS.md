@@ -1,47 +1,43 @@
-Write it as "**MUST (Full Name Here)**" on first mention.
+# Agent Rules & Project Standards for cloudflare-worker
 
 ## Repository Overview
 
-dotfiles contains personal configuration files, scripts, and settings for development environment setup.
+cloudflare-worker serves an RFC 9116-compliant `security.txt` file for
+Lanik.us domains using Cloudflare Workers.
 
 ## Code Standards and Practices
 
-### Shell Scripts
+### TypeScript & Worker Standards
 
-- Use appropriate shebangs (`#!/usr/bin/env bash`, `#!/usr/bin/env zsh`)
-- Implement proper error handling with `set -euo pipefail`
-- Include usage documentation and help functions
-- Follow shellcheck-compliant code patterns
-
-### Configuration Standards
-
-- Maintain cross-platform compatibility where possible
-- Use clear naming conventions for configuration files
-- Document configuration options and their effects
-- Include backup and restore mechanisms where applicable
+- Write clean, maintainable TypeScript following modern ES best practices
+- Use proper TypeScript types and interfaces for Worker bindings (Env, etc.)
+- Implement proper error handling and response status codes
+- Follow Cloudflare Workers runtime best practices and API usage patterns
 
 ### Documentation Standards
 
-- Include clear setup and installation instructions
-- Document dependencies and prerequisites
-- Provide troubleshooting guidance for common issues
+- Include clear setup and deployment instructions
+- Document Worker-specific configurations and bindings
+- Provide platform-specific deployment instructions for Cloudflare Workers
 - Use markdown formatting consistently
 
 ### Markdown Compliance Requirements (MANDATORY)
 
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
-
-- Run `markdownlint <filename>` on every markdown file before considering it complete
+- **ALL markdown files (.md) MUST pass markdownlint validation with zero
+  errors or warnings**
+- Run `markdownlint <filename>` on every markdown file before considering it
+  complete
 - Follow the project's `.markdownlint.json` configuration strictly
-- Write it as "**ALL (Full Name Here)**" on first mention.
+- Address ALL markdownlint issues immediately — no exceptions or workarounds
 - Common requirements include:
-  - Maximum line length of 80 characters (MD013)
+  - Maximum line length of 120 characters (MD013) to match
+    `.markdownlint.json`
   - Consistent heading styles and hierarchy
   - Proper list formatting and indentation
   - Blank lines around headings and code blocks
   - Consistent link and reference formatting
   - No trailing whitespace
-  - Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+  - Files must end with newlines
   - Proper table formatting when applicable
 - Use `markdownlint --fix <filename>` for auto-fixable issues when available
 - Validate markdown files in CI/CD pipelines where applicable
@@ -51,20 +47,46 @@ Add an exception path (e.g., 'unless the user explicitly requests it') or escala
 ### When Making Changes
 
 - Preserve existing functionality unless explicitly asked to change it
-- Update documentation when modifying configurations
-- Test changes across different systems and environments
-- Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+- Update documentation when modifying Worker behavior
+- Test changes locally with `wrangler dev` before deploying
+- **Always run markdownlint and fix all issues in markdown files before
+  considering changes complete**
+- Run `npm test` (Vitest) to verify existing tests still pass
 
-### Dotfiles Standards
+### Commit Message Convention
 
-- Use symlinks or installation scripts for deployment
-- Implement configuration validation where possible
-- Provide clear uninstallation procedures
-- Consider security implications when storing sensitive configurations
+- Use the conventional commit format: `type(scope): description`
+- Common types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`,
+  `ci`
+- Commit descriptions should be a bullet list of changes made
+- Example:
+
+  ```text
+  docs(AGENTS.md): update agent rules for cloudflare-worker project
+
+  - this file had the wrong data from a totally different repository
+  ```
+
+### Worker Standards
+
+- Use Wrangler CLI commands via `npm run` scripts defined in `package.json`
+- Keep Worker entry point lean; delegate logic to helper functions
+- Validate environment variables (vars/secrets) at request time
+- Set appropriate `Content-Type` and `Cache-Control` headers
+- Use `wrangler types` (`npm run cf-typegen`) to generate worker type
+  definitions when bindings change
+
+### Security Considerations
+
+- Never commit sensitive information (API keys, tokens, passwords)
+- Use Wrangler secrets for sensitive environment variables
+- Validate and sanitize all request inputs
+- Follow RFC 9116 requirements precisely for security.txt responses
 
 ## GitHub & Automation Standards
 
-These rules apply specifically to files in `.github/*` (workflows, templates, and documentation).
+These rules apply specifically to files in `.github/*` (workflows, templates,
+and documentation).
 
 ### Quality Gates (MANDATORY)
 
@@ -77,13 +99,12 @@ Before completing any change in `.github/`:
 
 ### Templates and Workflows
 
-- Ensure issue and pull request templates provide clear, actionable guidelines.
+- Ensure issue and pull request templates provide clear, actionable
+  guidelines.
 - Include project-specific troubleshooting sections in templates.
 - Reference existing project documentation and standards.
 
 ### Documentation standards in .github/
-
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
 
 - Development environment setup instructions.
 - Testing requirements and procedures.
@@ -92,14 +113,15 @@ Add an exception path (e.g., 'unless the user explicitly requests it') or escala
 
 ### Automation and CI/CD
 
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
+- Project workflows must include automated testing stages.
+- Code quality checks must be integrated into CI/CD.
+- Release automation must be properly configured.
+- CI/CD should validate Worker deployments with Wrangler.
 
 ### Error Prevention
 
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
-Add an exception path (e.g., 'unless the user explicitly requests it') or escalation ('ask the user for confirmation').
-
+- NEVER generate markdown that violates line length or formatting rules.
+- ALWAYS cross-reference with existing project practices before making
+  changes.
 - ENSURE all links and references are valid and current.
 - VALIDATE that new requirements don't conflict with established workflows.
