@@ -3,8 +3,26 @@ name: Deploy Cloudflare Worker
 on:
   push:
     branches: [main]
+    paths:
+      - ".github/workflows/cloudflare-deploy.yml"
+      - "package.json"
+      - "package-lock.json"
+      - "src/**"
+      - "tsconfig.json"
+      - "vitest.config.mts"
+      - "worker-config.ts"
+      - "wrangler.jsonc"
   pull_request:
     branches: [main]
+    paths:
+      - ".github/workflows/cloudflare-deploy.yml"
+      - "package.json"
+      - "package-lock.json"
+      - "src/**"
+      - "tsconfig.json"
+      - "vitest.config.mts"
+      - "worker-config.ts"
+      - "wrangler.jsonc"
   workflow_dispatch:
 
 permissions:
