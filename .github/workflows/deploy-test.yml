@@ -3,6 +3,15 @@ name: Test Cloudflare Worker
 on:
   pull_request:
     branches: [main]
+    paths:
+      - ".github/workflows/deploy-test.yml"
+      - "package.json"
+      - "package-lock.json"
+      - "src/**"
+      - "tsconfig.json"
+      - "vitest.config.mts"
+      - "worker-config.ts"
+      - "wrangler.jsonc"
   workflow_dispatch:
 
 permissions:
