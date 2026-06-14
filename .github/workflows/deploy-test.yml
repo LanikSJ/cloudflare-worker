@@ -11,7 +11,7 @@ on:
       - "tsconfig.json"
       - "vitest.config.mts"
       - "worker-config.ts"
-      - "wrangler.jsonc"
+      - "wrangler.toml"
   workflow_dispatch:
 
 permissions:

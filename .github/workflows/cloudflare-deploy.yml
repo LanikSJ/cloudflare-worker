@@ -11,7 +11,7 @@ on:
       - "tsconfig.json"
       - "vitest.config.mts"
       - "worker-config.ts"
-      - "wrangler.jsonc"
+      - "wrangler.toml"
   pull_request:
     branches: [main]
     paths:
@@ -22,7 +22,7 @@ on:
       - "tsconfig.json"
       - "vitest.config.mts"
       - "worker-config.ts"
-      - "wrangler.jsonc"
+      - "wrangler.toml"
   workflow_dispatch:
 
 permissions:
