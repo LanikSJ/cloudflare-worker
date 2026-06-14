@@ -123,12 +123,12 @@ cloudflare-worker/
 ├── tsconfig.json             # TypeScript configuration
 ├── vitest.config.mts         # Vitest test configuration
 ├── worker-configuration.d.ts # Auto-generated worker types
-└── wrangler.jsonc            # Wrangler deployment config
+└── wrangler.toml             # Wrangler deployment config
 ```
 
 ## ⚙️ Configuration
 
-The `wrangler.jsonc` file defines the worker name, routes, and
+The `wrangler.toml` file defines the worker name, routes, and
 compatibility settings. Routes are configured for both
 `/.well-known/security.txt` and `/security.txt` paths on the
 configured domains.

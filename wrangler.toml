@@ -1,0 +1,42 @@
+# Security.txt Worker — serves RFC 9116 compliant security.txt for lanik.us domains
+name = "security-txt"
+main = "src/index.ts"
+compatibility_date = "2026-05-26"
+
+[vars]
+CONTACT_EMAIL = "admin@lanik.us"
+POLICY_URL = "https://laniksj.github.io"
+PREFERRED_LANGUAGES = "en"
+
+# lanik.us
+[[routes]]
+pattern = "lanik.us/.well-known/security.txt"
+zone_name = "lanik.us"
+
+[[routes]]
+pattern = "lanik.us/security.txt"
+zone_name = "lanik.us"
+
+# forums.lanik.us
+[[routes]]
+pattern = "*.lanik.us/.well-known/security.txt"
+zone_name = "lanik.us"
+
+[[routes]]
+pattern = "*.lanik.us/security.txt"
+zone_name = "lanik.us"
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = true
+persist = true
+head_sampling_rate = 1
