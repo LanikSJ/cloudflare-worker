@@ -23,15 +23,12 @@ Lanik.us domains using Cloudflare Workers.
 
 ### Markdown Compliance Requirements (MANDATORY)
 
-- **ALL markdown files (.md) MUST pass markdownlint validation with zero
-  errors or warnings**
-- Run `markdownlint <filename>` on every markdown file before considering it
-  complete
+- **ALL markdown files (.md) MUST pass markdownlint validation**
+  with zero errors or warnings
+- Run `markdownlint <filename>` on every markdown file before considering it complete
 - Follow the project's `.markdownlint.json` configuration strictly
-- Address ALL markdownlint issues immediately — no exceptions or workarounds
 - Common requirements include:
-  - Maximum line length of 120 characters (MD013) to match
-    `.markdownlint.json`
+  - Maximum line length of 80 characters (MD013)
   - Consistent heading styles and hierarchy
   - Proper list formatting and indentation
   - Blank lines around headings and code blocks
@@ -56,8 +53,7 @@ Lanik.us domains using Cloudflare Workers.
 ### Commit Message Convention
 
 - Use the conventional commit format: `type(scope): description`
-- Common types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`,
-  `ci`
+- Common types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `ci`
 - Commit descriptions should be a bullet list of changes made
 - Example:
 
@@ -66,6 +62,25 @@ Lanik.us domains using Cloudflare Workers.
 
   - this file had the wrong data from a totally different repository
   ```
+
+#### Commit Types
+
+- **feat**: A new feature
+- **fix**: A bug fix
+- **docs**: Documentation only changes
+- **style**: Formatting (white-space, etc)
+- **refactor**: Code change that neither fixes a bug nor adds a feature
+- **perf**: Performance improvement
+- **test**: Adding or correcting tests
+- **chore**: Changes to build process or auxiliary tools
+
+#### Scope Guidelines
+
+- **action**: main action logic
+- **docs**: documentation
+- **tests**: test-related
+- **ci**: CI/CD configuration
+- **deps**: dependency updates
 
 ### Worker Standards
 
