@@ -24,7 +24,7 @@ Lanik.us domains using Cloudflare Workers.
 ### Markdown Compliance Requirements (MANDATORY)
 
 - **ALL markdown files (.md) MUST pass markdownlint validation**
-   with zero errors or warnings
+  with zero errors or warnings
 - Run `markdownlint <filename>` on every markdown file before considering it complete
 - Follow the project's `.markdownlint.json` configuration strictly
 - Common requirements include:
