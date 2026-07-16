@@ -29,12 +29,13 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
       - name: Setup Restyled
-        uses: restyled-io/actions/setup@f31a2185676c560a98c4f9e0185e9bfe8ec3eaf9 # v4.4.24
+        uses: restyled-io/actions/setup@b87d2ee4ebec513b156ce9f2160b1d4ae12a840e # v4.4.27
       - name: Run Restyled
         id: restyler
-        uses: restyled-io/actions/run@f31a2185676c560a98c4f9e0185e9bfe8ec3eaf9 # v4.4.24
+        uses: restyled-io/actions/run@b87d2ee4ebec513b156ce9f2160b1d4ae12a840e # v4.4.27
         with:
           fail-on-differences: true
+          github-token: ${{ github.token }}
 
       - name: Create Restyled PR
         if: ${{ !cancelled() && steps.restyler.outputs.success == 'true' }}
@@ -61,11 +62,12 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
       - name: Setup Restyled
-        uses: restyled-io/actions/setup@f31a2185676c560a98c4f9e0185e9bfe8ec3eaf9 # v4.4.24
+        uses: restyled-io/actions/setup@b87d2ee4ebec513b156ce9f2160b1d4ae12a840e # v4.4.27
       - name: Run Restyled
-        uses: restyled-io/actions/run@f31a2185676c560a98c4f9e0185e9bfe8ec3eaf9 # v4.4.24
+        uses: restyled-io/actions/run@b87d2ee4ebec513b156ce9f2160b1d4ae12a840e # v4.4.27
         with:
           fail-on-differences: true
+          github-token: ${{ github.token }}
 
   cleanup-restyled-prs:
     name: Cleanup Restyled PRs
@@ -73,10 +75,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Restyled
-        uses: restyled-io/actions/setup@f31a2185676c560a98c4f9e0185e9bfe8ec3eaf9 # v4.4.24
+        uses: restyled-io/actions/setup@b87d2ee4ebec513b156ce9f2160b1d4ae12a840e # v4.4.27
       - name: Run Restyled
         id: restyler
-        uses: restyled-io/actions/run@f31a2185676c560a98c4f9e0185e9bfe8ec3eaf9 # v4.4.24
+        uses: restyled-io/actions/run@b87d2ee4ebec513b156ce9f2160b1d4ae12a840e # v4.4.27
       - name: Close Restyled PR
         run: gh --repo "$REPO" pr close "$BRANCH" --delete-branch || true
         env:
