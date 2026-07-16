@@ -35,6 +35,7 @@ jobs:
         uses: restyled-io/actions/run@bce8886781a3a4e9510a248d37a87e64ba143465 # v4.4.27
         with:
           fail-on-differences: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Restyled PR
         if: ${{ !cancelled() && steps.restyler.outputs.success == 'true' }}
