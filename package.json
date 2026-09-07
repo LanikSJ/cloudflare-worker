@@ -17,6 +17,7 @@
 		"wrangler": "^4.129.0"
 	},
 	"overrides": {
-		"esbuild": "0.28.1"
+		"esbuild": "0.28.1",
+		"vitest": "^4.1.11"
 	}
 }
