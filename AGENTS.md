@@ -46,6 +46,7 @@ Lanik.us domains using Cloudflare Workers.
 - Preserve existing functionality unless explicitly asked to change it
 - Update documentation when modifying Worker behavior
 - Test changes locally with `wrangler dev` before deploying
+- **DO NOT commit changes to git repositories directly**
 - **Always run markdownlint and fix all issues in markdown files before
   considering changes complete**
 - Run `npm test` (Vitest) to verify existing tests still pass
