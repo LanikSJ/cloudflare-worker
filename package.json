@@ -1,24 +1,25 @@
 {
-	"name": "security-txt",
-	"version": "1.0.0",
-	"private": true,
-	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
-		"start": "wrangler dev",
-		"test": "vitest --run",
-		"cf-typegen": "wrangler types"
-	},
-	"devDependencies": {
-		"@cloudflare/vitest-pool-workers": "^0.22.0",
-		"@types/node": "^26.6.2",
-		"typescript": "^7.0.2",
-		"vitest": "^4.1.11",
-		"wrangler": "^4.142.0"
-	},
-	"overrides": {
-		"esbuild": "0.28.2",
-		"sharp": "^0.35.4",
-		"vitest": "^4.1.11"
-	}
+  "name": "security-txt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest --run",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.22.0",
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.142.0"
+  },
+  "overrides": {
+    "esbuild": "0.28.2",
+    "sharp": "^0.35.4",
+    "undici": "^7.29.1",
+    "vitest": "^4.1.11"
+  }
 }
