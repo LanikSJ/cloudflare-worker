@@ -166,3 +166,6 @@ dist
 .env*
 !.env.example
 .wrangler/
+
+# Global .agents folder (using global .agents configuration)
+.agents/
