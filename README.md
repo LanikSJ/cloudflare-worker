@@ -143,7 +143,6 @@ file.
 To report a security vulnerability, please see
 [SECURITY.md](./SECURITY.md) for instructions on responsible disclosure.
 
-
 ## ⚙️ Skills Automation
 
 This repository maintains agent skills via `skills-lock.json`. The GitHub Actions
